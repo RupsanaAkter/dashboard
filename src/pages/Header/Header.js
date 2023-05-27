@@ -3,20 +3,21 @@ import { List } from 'antd/es/form/Form';
 import Typography from 'antd/es/typography/Typography';
 import React, { useEffect, useState } from 'react';
 import { BellFilled, MailOutlined } from "@ant-design/icons";
+import { getComments, getOrders } from '../../API/Api';
 const Header = () => {
     const [comments, setComments] = useState([]);
     const [orders, setOrders] = useState([]);
     const [commentsOpen, setCommentsOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
   
-    // useEffect(() => {
-    //   getComments().then((res) => {
-    //     setComments(res.comments);
-    //   });
-    //   getOrders().then((res) => {
-    //     setOrders(res.products);
-    //   });
-    // }, []);
+    useEffect(() => {
+      getComments().then((res) => {
+        setComments(res.comments);
+      });
+      getOrders().then((res) => {
+        setOrders(res.products);
+      });
+    }, []);
   
     return (
       <div className="AppHeader">

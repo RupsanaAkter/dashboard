@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router-dom';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Inventory from '../components/Inventory/Inventory';
 import Orders from '../components/Orders/Orders';
+import Customers from '../components/Customers/Customers';
 
 function AppRoutes()  {
     return (
@@ -10,7 +11,7 @@ function AppRoutes()  {
                 <Route path="/" element={<Dashboard />}></Route>
                <Route path="/inventory" element={<Inventory />}></Route>
              <Route path="/orders" element={<Orders />}></Route>
-              {/* <Route path="/customers" element={<Customers />}></Route>     */}
+               <Route path="/customers" element={<Customers />}></Route>     
             </Routes>
     );
 };

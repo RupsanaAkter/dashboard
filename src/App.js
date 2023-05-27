@@ -1,12 +1,13 @@
 
 import './App.css';
 import Footer from './pages/Footer/Footer';
+import Header from './pages/Header/Header';
 import SideMenu from './pages/SideMenu/SideMenu';
 
 function App() {
   return (
     <div className="App">
-       {/* <AppHeader /> */}
+       <Header />
       <div className="SideMenuAndPageContent">
         <SideMenu></SideMenu>
         {/* <PageContent></PageContent> */}
